@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça os projetos da Rede Florescer e saiba como ser voluntária(o) ou fazer uma doação.">
+  <title>Rede Florescer | Projetos</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/tema.js"></script>
+</head>
+<body>
+  <a href="#app" class="pular-conteudo">Pular para o conteúdo</a>
+  <p id="anuncio-rota" class="visualmente-oculto" aria-live="polite"></p>
+
+  <header>
+    <div class="container topo">
+      <a href="../index.html" class="logo">
+        <img src="../imagens/logo.svg" alt="" width="40" height="40">
+        Rede Florescer
+      </a>
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icone"><span aria-hidden="true">&#9776;</span> Menu</label>
+        <ul class="menu">
+          <li><a href="../index.html">Início</a></li>
+          <li class="tem-submenu">
+            <a href="projetos.html">Projetos</a>
+            <ul class="submenu">
+              <li><a href="projetos.html#voluntariado">Seja voluntária(o)</a></li>
+              <li><a href="projetos.html#doacao">Faça uma doação</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="botao-tema" class="botao-tema">Tema: Automático</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section class="banner">
+      <div class="container">
+        <h1>Nossos projetos</h1>
+        <p>Conheça as iniciativas que mantemos com a ajuda de voluntárias e voluntários.</p>
+      </div>
+    </section>
+
+    <div class="container secao">
+      <div class="cartoes cartoes--4" id="lista-projetos">
+        <!-- Os cartões são gerados pelo js/templates.js a partir do js/dados.js -->
+        <noscript><p>Ative o JavaScript para ver a lista de projetos.</p></noscript>
+      </div>
+    </div>
+
+    <section class="container secao" id="voluntariado">
+      <h2>Seja voluntária ou voluntário</h2>
+      <p>Você pode doar seu tempo e seu talento em qualquer um dos projetos acima.</p>
+      <ol>
+        <li>Faça seu cadastro no nosso formulário.</li>
+        <li>Participe de uma conversa com a nossa equipe.</li>
+        <li>Escolha o projeto que combina com você.</li>
+      </ol>
+      <a href="cadastro.html" class="botao">Fazer cadastro</a>
+    </section>
+
+    <section class="container secao" id="doacao">
+      <h2>Faça uma doação</h2>
+      <p>Toda doação ajuda a manter os atendimentos gratuitos.</p>
+      <div class="alerta alerta--aviso">
+        <span class="alerta__icone" aria-hidden="true">&#9888;</span>
+        <p><strong>Atenção:</strong> a Rede Florescer nunca pede doações por telefone ou WhatsApp. Use apenas os dados desta página.</p>
+      </div>
+      <div class="cartoes cartoes--2">
+        <article class="cartao">
+          <h3>Doação em dinheiro</h3>
+          <ul>
+            <li><strong>PIX:</strong> doacao@redeflorescer.org</li>
+            <li><strong>Banco:</strong> 000 - Agência 0001 - Conta 12345-6</li>
+          </ul>
+        </article>
+        <article class="cartao">
+          <h3>Campanha Kit Dignidade</h3>
+          <p>Arrecadamos absorventes, sabonetes e produtos de higiene. Entregue na nossa sede, de segunda a sexta, das 9h às 17h.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <address>
+        Rede Florescer - Rua das Flores, 123 - São Paulo/SP<br>
+        E-mail: contato@redeflorescer.org | Telefone: (11) 99999-9999
+      </address>
+      <p>Em caso de violência, ligue <strong>180</strong> (Central de Atendimento à Mulher).</p>
+      <p><a href="componentes.html">Guia de componentes</a></p>
+      <p>&copy; 2026 Rede Florescer. Projeto acadêmico.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/dados.js"></script>
+  <script src="../js/armazenamento.js"></script>
+  <script src="../js/templates.js"></script>
+  <script src="../js/feedback.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/grafico.js"></script>
+  <script src="../js/router.js"></script>
+</body>
+</html>

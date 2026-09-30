@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guia de componentes do site da Rede Florescer: badges, alertas, toast e modal.">
+  <title>Rede Florescer | Guia de componentes</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/tema.js"></script>
+</head>
+<body>
+  <a href="#app" class="pular-conteudo">Pular para o conteúdo</a>
+  <p id="anuncio-rota" class="visualmente-oculto" aria-live="polite"></p>
+
+  <header>
+    <div class="container topo">
+      <a href="../index.html" class="logo">
+        <img src="../imagens/logo.svg" alt="" width="40" height="40">
+        Rede Florescer
+      </a>
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icone"><span aria-hidden="true">&#9776;</span> Menu</label>
+        <ul class="menu">
+          <li><a href="../index.html">Início</a></li>
+          <li class="tem-submenu">
+            <a href="projetos.html">Projetos</a>
+            <ul class="submenu">
+              <li><a href="projetos.html#voluntariado">Seja voluntária(o)</a></li>
+              <li><a href="projetos.html#doacao">Faça uma doação</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="botao-tema" class="botao-tema">Tema: Automático</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section class="banner">
+      <div class="container">
+        <h1>Guia de componentes</h1>
+        <p>Componentes de feedback do site, com as classes CSS de cada um, para reutilizar em novas páginas.</p>
+      </div>
+    </section>
+
+    <section class="container secao">
+      <h2>Badges (etiquetas)</h2>
+      <p>Classe base <code>.badge</code> + variação. Usadas para categorizar os projetos e mostrar o status das vagas.</p>
+      <div class="badges">
+        <span class="badge badge--primaria">.badge--primaria</span>
+        <span class="badge badge--sucesso">.badge--sucesso</span>
+        <span class="badge badge--aviso">.badge--aviso</span>
+        <span class="badge badge--info">.badge--info</span>
+        <span class="badge badge--neutro">.badge--neutro</span>
+      </div>
+    </section>
+
+    <section class="container secao">
+      <h2>Alertas</h2>
+      <p>Classe base <code>.alerta</code> + variação. Mensagens fixas que ficam na página.</p>
+      <div class="alerta alerta--sucesso">
+        <span class="alerta__icone" aria-hidden="true">&#10003;</span>
+        <p><strong>Sucesso:</strong> seu cadastro foi recebido. (.alerta--sucesso)</p>
+      </div>
+      <div class="alerta alerta--erro">
+        <span class="alerta__icone" aria-hidden="true">&#10007;</span>
+        <p><strong>Erro:</strong> não foi possível enviar. Confira os campos em vermelho. (.alerta--erro)</p>
+      </div>
+      <div class="alerta alerta--aviso">
+        <span class="alerta__icone" aria-hidden="true">&#9888;</span>
+        <p><strong>Atenção:</strong> nunca pedimos doações por telefone. (.alerta--aviso)</p>
+      </div>
+      <div class="alerta alerta--info">
+        <span class="alerta__icone" aria-hidden="true">&#9432;</span>
+        <p><strong>Informação:</strong> seus dados são protegidos pela LGPD. (.alerta--info)</p>
+      </div>
+    </section>
+
+    <section class="container secao">
+      <h2>Toast e modal</h2>
+      <p>O toast (<code>.toast</code>) aparece no canto da tela e some sozinho em 4 segundos. O modal usa a tag nativa <code>&lt;dialog&gt;</code> com a classe <code>.modal</code>.</p>
+      <div class="badges">
+        <button type="button" class="botao" data-toast="Cadastro enviado com sucesso! Obrigado por se voluntariar.">Mostrar toast</button>
+        <button type="button" class="botao" data-abrir-modal="modal-exemplo">Abrir modal</button>
+        <button type="button" class="botao" disabled>Botão desabilitado</button>
+      </div>
+    </section>
+
+    <dialog id="modal-exemplo" class="modal" aria-labelledby="titulo-modal">
+      <h2 id="titulo-modal">Obrigada por apoiar!</h2>
+      <p>Este é o modal padrão do site. Ele escurece o fundo, recebe o foco do teclado e fecha com o botão abaixo ou com a tecla Esc.</p>
+      <form method="dialog" class="modal__acoes">
+        <button class="botao">Fechar</button>
+      </form>
+    </dialog>
+  </main>
+
+  <footer>
+    <div class="container">
+      <address>
+        Rede Florescer - Rua das Flores, 123 - São Paulo/SP<br>
+        E-mail: contato@redeflorescer.org | Telefone: (11) 99999-9999
+      </address>
+      <p>Em caso de violência, ligue <strong>180</strong> (Central de Atendimento à Mulher).</p>
+      <p><a href="componentes.html">Guia de componentes</a></p>
+      <p>&copy; 2026 Rede Florescer. Projeto acadêmico.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/dados.js"></script>
+  <script src="../js/armazenamento.js"></script>
+  <script src="../js/templates.js"></script>
+  <script src="../js/feedback.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/grafico.js"></script>
+  <script src="../js/router.js"></script>
+</body>
+</html>
